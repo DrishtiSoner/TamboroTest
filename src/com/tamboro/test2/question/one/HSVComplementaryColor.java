@@ -40,14 +40,16 @@ public class HSVComplementaryColor {
 		HSV colorOne = new HSV(195, 11, 12);
 		HSV colorSecond = new HSV(37, 13, 76);
 		HSV colorThird = new HSV(15, 11, 12);
+		HSV colorFourth = new HSV(217, 13, 76);
 
 		hsvColorVector.add(colorThird);
 		hsvColorVector.add(colorOne);
 		hsvColorVector.add(colorSecond);
+		hsvColorVector.add(colorFourth);
 
 		Vector<HSV> hsvComplementaryColorVector = HSVComplementaryColor.getComplementaryColorPairs(hsvColorVector);
 
-		if (hsvComplementaryColorVector.size() > 0) {
+		if (!hsvComplementaryColorVector.isEmpty()) {
 			System.out.println(hsvComplementaryColorVector);
 		} else {
 			System.out.println("No pairs found.");

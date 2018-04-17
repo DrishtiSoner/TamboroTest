@@ -54,7 +54,7 @@ public class TicTacMain {
 
 			scanner = new Scanner(System.in);
 			String input = scanner.nextLine();
-			String inputArray[] = input.split(",");
+			String[] inputArray = input.split(",");
 
 			try {
 				row = Integer.parseInt(inputArray[0]);

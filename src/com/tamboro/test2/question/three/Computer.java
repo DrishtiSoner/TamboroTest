@@ -40,7 +40,7 @@ public class Computer {
 
 			scanner = new Scanner(System.in);
 			String input = scanner.nextLine();
-			String inputArray[] = input.split(",");
+			String[] inputArray = input.split(",");
 
 			try {
 				row = Integer.parseInt(inputArray[0]);
@@ -106,18 +106,15 @@ public class Computer {
 
 	private static List<Integer> move() {
 		List<Integer> computerMoves = new ArrayList<>();
-		computerMoves.add(firstMove());
-		computerMoves.add(secondMove());
+		computerMoves.add(moveCoordinate());
+		computerMoves.add(moveCoordinate());
 		return computerMoves;
 	}
 
-	private static int firstMove() {
+	private static int moveCoordinate() {
 		Random r = new Random();
 		return r.nextInt(maxOfMove + 1);
 	}
 
-	private static int secondMove() {
-		Random r = new Random();
-		return r.nextInt(maxOfMove + 1);
-	}
+
 }

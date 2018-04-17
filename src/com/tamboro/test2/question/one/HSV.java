@@ -56,22 +56,17 @@ public class HSV {
 
 	@Override
 	public boolean equals(Object obj) {
-
 		HSV hsv = (HSV) obj;
-		if (this.hue.equals(hsv.getHue())) {
-			if (this.saturation.equals(hsv.getSaturation())) {
-				if (this.value.equals(hsv.getValue())) {
-					return true;
-				}
-			}
+		if (hsv != null && this.hue.equals(hsv.getHue()) && this.saturation.equals(hsv.getSaturation())
+				&& this.value.equals(hsv.getValue())) {
+			return true;
 		}
 		return false;
 	}
 
 	@Override
 	public int hashCode() {
-		int hashcode = Objects.hash(this.getHue(), this.getSaturation(), this.getValue());
-		return hashcode;
+		return Objects.hash(this.getHue(), this.getSaturation(), this.getValue());
 	}
 
 	@Override
